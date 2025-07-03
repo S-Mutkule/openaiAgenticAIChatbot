@@ -23,8 +23,6 @@ async def on_window_message(message : str):
 @cl.on_message
 async def main(message : cl.Message):
     gemini_api_key = os.getenv("GEMINI_API_KEY")
-    print(f"the message received is {message.content}")
-    print(f"the gemini api key is {gemini_api_key}")
     client = AsyncOpenAI(
         api_key=gemini_api_key, 
         base_url="https://generativelanguage.googleapis.com/v1beta/openai/"
