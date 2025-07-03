@@ -6,6 +6,20 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+@cl.on_chat_start
+async def start():
+    banner = cl.CustomElement(name="PersistentBanner")
+    await cl.Message(
+        content="",
+        elements=[banner]
+    ).send()
+
+@cl.on_window_message
+async def on_window_message(message : str):
+    await cl.Message(
+        content="This is Agentic AI Chatbot"
+    ).send()
+
 @cl.on_message
 async def main(message : cl.Message):
     gemini_api_key = os.getenv("GEMINI_API_KEY")
