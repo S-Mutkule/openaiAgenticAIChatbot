@@ -6,7 +6,7 @@ readme = "README.md"
 authors = [
     { name = "Sarwadnya Mutkule", email = "sarwadnyamutkule99@gmail.com" }
 ]
-requires-python = ">=3.12"
+requires-python = "==3.12.10"
 dependencies = [
     "chainlit>=2.6.0",
     "openai-agents>=0.1.0",
