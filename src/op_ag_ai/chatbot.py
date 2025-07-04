@@ -8,7 +8,7 @@ load_dotenv()
 
 @cl.on_chat_start
 async def start():
-    banner = cl.CustomElement(name="PersistentBanner")
+    banner = cl.CustomElement(name="persistentbanner")
     await cl.Message(
         content="",
         elements=[banner]
